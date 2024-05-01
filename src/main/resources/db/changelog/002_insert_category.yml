@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002_insert_category
+      author: sochoeun.khorn@gamil.com
+      changes:
+        - loadData:
+            tableName: categories
+            columns:
+              - column:
+                  name: category_id
+                  type: NUMERIC
+              - column:
+                  name: category_name
+                  type: STRING
+            file: db/seed_data/002_insert_category.csv
+
+        - sql:
+            sql: SELECT setval('categories_category_id_seq',(SELECT nextval('categories_category_id_seq')+4))
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001_init_db_structure
+      author: sochoeun.khorn@gamil.com
+      changes:
+        - createTable:
+            tableName: categories
+            columns:
+              - column:
+                  name: category_id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: category_name
+                  type: VARCHAR(50)
+        - createTable:
+            tableName: courses
+            columns:
+              - column:
+                  name: course_id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: course_name
+                  type: VARCHAR(50)
+              - column:
+                  name: category_id
+                  type: BIGINT
+                  constraints:
+                    - foreignKeyName: fk_course_category
+                      references: categories(category_id)

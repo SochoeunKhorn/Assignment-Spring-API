@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: spring-api
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/assignment-spring-boot
+    username: postgres
+    password: 123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# Liquibase
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/changelog.yaml

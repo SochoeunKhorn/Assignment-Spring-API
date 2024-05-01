@@ -1,0 +1,60 @@
+== Assignment Spring Boot API ==
+I - Requirement
+    - Technology
+        + Java 17 up
+        + Dependency: Spring Data, Spring Boot, Spring Security, JWT, PostgreSQL, Liquibase, Junit, Mapstruct, Swagger-UI
+    - Role and Security
+        + Admin: can do everything
+        + Author: can CRUD his own video, can review(approve/reject) subscriber request
+        + Subscriber: can view only his own video and view course overview
+    - Note
+        + use liquibase for generate table and insert some sample data
+        + unit coverage 90% up
+II - My Work
+    - Start: 4/30/2024
+    - Java 21
+    - Spring Boot 3.2.4
+    - step:
+
+1. Connection Datasource
+2. Project Structure
+3. Create Entity
+    - Category: (1)
+        ID, Name
+    - Course: (Many)
+        ID, Name, CategoryId
+4. Liquibase
+    - seed data
+    - dependency
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+            <version>4.27.0</version>
+        </dependency>
+    - config
+        + .yaml
+          liquibase:
+            enabled: true
+            change-log: classpath:db/changelog/changelog.yaml
+    - init liquibase
+        + /resources/db/
+        changelog/
+            + changelog.yaml
+            + 001_init_structure.yml
+            + 002_insert_category.yml
+        seed_data/
+            + csv
+5. CRUD operation
+    - service
+    - repository
+    - dto
+    - mapper -> mapstruct
+        + dependency
+        + plugin
+    - controller
+
+6. Exception
+
+
+
+
