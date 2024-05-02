@@ -71,5 +71,13 @@ II - My Work
 2. CRUD Operation
     - dto at service logic
 
+3. Add Swagger-UI
+    - dependency:
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+
 
 
