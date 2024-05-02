@@ -11,11 +11,13 @@ I - Requirement
         + use liquibase for generate table and insert some sample data
         + unit coverage 90% up
 II - My Work
-    - Start: 4/30/2024
-    - Java 21
+    - Start: 5/1/2024
+    - Java 17
     - Spring Boot 3.2.4
     - step:
 
+    > 5/1/2024 <
+    -> Category <-
 1. Connection Datasource
 2. Project Structure
 3. Create Entity
@@ -54,7 +56,20 @@ II - My Work
     - controller
 
 6. Exception
+7. Testing
+    - Unit Test
+        + Service
+        + Repository
+        + Controller
+    - Integration Test
+    - End-to-End Test
 
+    > 5/2/2024 <
+
+    -> Courses <-
+1. Liquibase
+2. CRUD Operation
+    - dto at service logic
 
 
 

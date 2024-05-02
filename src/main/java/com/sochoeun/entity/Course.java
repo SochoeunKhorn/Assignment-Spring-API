@@ -17,9 +17,11 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "course_id")
     private Long id;
+
+    @Column(name = "course_name")
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "cateogry_id")
+    @JoinColumn(name = "category_id")
     private Category category;
 }

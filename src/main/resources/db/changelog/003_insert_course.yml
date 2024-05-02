@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002_insert_course
+      author: sochoeun.khorn@gamil.com
+      changes:
+        - loadData:
+            tableName: courses
+            columns:
+              - column:
+                  name: course_id
+                  type: NUMERIC
+              - column:
+                  name: course_name
+                  type: STRING
+              - column:
+                  name: category_id
+                  type: NUMERIC
+            file: db/seed_data/003_insert_course.csv
+
+        - sql:
+            sql: SELECT setval('courses_course_id_seq',(SELECT nextval('courses_course_id_seq')+4))
+
+
+
+
+
+

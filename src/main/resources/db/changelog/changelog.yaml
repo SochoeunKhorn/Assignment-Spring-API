@@ -3,3 +3,5 @@ databaseChangeLog:
       - file: db/changelog/001_init_structure.yml
   - include:
       - file: db/changelog/002_insert_category.yml
+  - include:
+      - file: db/changelog/003_insert_course.yml
